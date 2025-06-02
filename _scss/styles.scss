@@ -1,0 +1,52 @@
+@import "../sass/variables";
+
+body {
+  font-family: var(--font-stack);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+header {
+  background: var(--primary-color);
+  color: var(--header-text-color);
+  padding: 1rem;
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+  }
+
+  a {
+    color: var(--header-text-color);
+    text-decoration: none;
+  }
+}
+
+main {
+  padding: 2rem;
+}
+
+footer {
+  background: var(--footer-bg-color);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.project-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--image-border-color);
+    border-radius: 4px;
+  }
+}
