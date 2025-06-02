@@ -1,37 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
-  <header>
-    <h1>My Portfolio</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-      </ul>
-    </nav>
-  </header>
+---
+layout: default
+title: Home
+---
 
-  <main>
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="projects/project-1.html">Project 1</a></li>
-    </ul>
-    <ul>
-      {% for project in site.projects %}
-      - [{{ project.title }}]({{ project.url }})
-      {% endfor %}
-    </ul>
-  </main>
+<h1>My Portfolio</h1>
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+  </ul>
+</nav>
 
-  <footer>
-    <p>&copy; 2025 Your Name</p>
-  </footer>
+<main>
+  <h2>Projects</h2>
+  <ul>
+    {% for project in site.projects %}
+      <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+    {% endfor %}
+  </ul>
+</main>
 
-  <script src="assets/js/main.js"></script>
-</body>
-</html>
+<footer>
+  <p>&copy; {{ site.time | date: '%Y' }} Your Name</p>
+</footer>
