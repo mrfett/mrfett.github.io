@@ -1,7 +1,7 @@
 title: My Portfolio
 description: My professional work and projects
 baseurl: "" # Leave blank for user.github.io type repos
-url: "https://yourusername.github.io"
+url: "https://mrfett.github.io"
 theme: minima # Optional – you can use or override built-in themes
 collections:
   projects:
